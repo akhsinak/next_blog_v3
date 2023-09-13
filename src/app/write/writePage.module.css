@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+.select {
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  margin-left: 50px;
+  width: max-content;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  /* border: 2px solid red; */
+  background-color: var(--bg);
+  color: var(--softTextColor);
+}
+
+.editor {
+  display: flex;
+  gap: 10px;
+  height: 700px;
+  position: relative;
+  padding: 20px;
+  border-radius: 40px;
+  /* -webkit-box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.75); */
+  box-shadow: 0px 0px 35px 0px var(--shadowcol);
+  background-color: var(--editor-bg);
+  /* border: 2px solid green; */
+}
+
+.addButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* border: 2px solid red; */
+  /* margin-right: 100px; */
+}
+
+.addButton {
+  border-color: #1a8917;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  background-color: var(--bg);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* border: 2px solid pink; */
+  width: 50px;
+  align-items: center;
+  /* position: relative; */
+  background-color: var(--editor-bg);
+}
+
+.input {
+  padding: 50px;
+  font-size: 50px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--textColor);
+  /* border: 2px solid red; */
+}
+
+.input::placeholder {
+  color: #b3b3b1;
+}
+
+.textArea {
+  width: 100%;
+  font-size: 100px;
+  /* border: 2px solid red; */
+}
+
+.publish {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1a8917;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 19px;
+  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); */
+  transition: box-shadow 0.1s ease; /* Add a smooth transition to the box-shadow property */
+}
+
+.publish:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.plus {
+  /* border: 2px solid blue; */
+  display: flex;
+  height: 100px;
+  gap: 20px;
+  flex-direction: column;
+  height: 230px;
+  width: 60px;
+  align-items: center;
+  background-color: var(--editor-bg);
+}
