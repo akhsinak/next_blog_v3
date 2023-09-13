@@ -19,6 +19,17 @@
   width: 100%;
 }
 
+/* .button {
+  padding: 16px 20px;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Button styles (unchanged) */
 .button {
   padding: 16px 20px;
   background-color: teal;
@@ -27,13 +38,37 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  position: relative; /* Add position:relative */
 }
 
-.comments{
+/* Spinner styles (updated) */
+.button .spinner {
+  position: absolute; /* Position the spinner relative to the button */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the spinner */
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Rotate animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.comments {
   margin-top: 50px;
 }
 
-.comment{
+.comment {
   margin-bottom: 50px;
 }
 
@@ -60,11 +95,11 @@
   font-weight: 500;
 }
 
-.date{
+.date {
   font-size: 14px;
 }
 
-.desc{
+.desc {
   font-size: 18px;
   font-weight: 300;
 }

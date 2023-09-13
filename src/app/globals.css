@@ -24,7 +24,7 @@ a {
 .dark {
   --bg: rgb(20, 20, 20);
   --textColor: #ddd;
-  --softBg: #1f273a;
+  --softBg: rgb(34, 33, 33);
   --softTextColor: #a6a6a6;
   --log-color: rgb(199, 4, 4);
   --bgvar: rgb(199, 236, 239);
@@ -92,4 +92,39 @@ a {
 
 .quill > .ql-container > .ql-editor.ql-blank::before {
   color: #b3b3b1;
+}
+
+.spinner-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  z-index: 10;
+}
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  /* -webkit-animation: rotation 0.5s infinite linear;
+  -moz-animation: rotation 0.5s infinite linear;
+  -o-animation: rotation 0.5s infinite linear; */
+  animation: rotation 0.5s infinite linear;
+  border: 6px solid blue;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

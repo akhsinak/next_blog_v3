@@ -111,8 +111,8 @@ const WritePage = () => {
         <option value="travel">Travel</option>
         <option value="coding">Coding</option>
       </select>
-      <div className={styles.editor}>
 
+      <div className={styles.editor}>
         <div className={styles.plus}>
 
           <button className={styles.button} onClick={() => setOpen(!open)}>
@@ -131,15 +131,8 @@ const WritePage = () => {
                   <Image src="/image.png" alt="" width={20} height={20} />
                 </label>
               </button>
-              {/* <button className={styles.addButton}>
-                <Image src="/external.png" alt="" width={16} height={16} />
-              </button> */}
-              {/* <button className={styles.addButton}>
-                <Image src="/video.png" alt="" width={16} height={16} />
-              </button> */}
             </div>
           )}
-
 
         </div>
 
@@ -151,6 +144,8 @@ const WritePage = () => {
           placeholder="Tell your story..."
         />
       </div>
+
+
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
       </button>
