@@ -1,13 +1,22 @@
-.title{
-  background-color: coral;
-  color: white;
+.title {
+  /* background-color: coral; */
+  color: var(--textColor);
   padding: 5px 10px;
   text-align: center;
   text-transform: capitalize;
+  /* border: 2px solid red; */
+  font-family: "__Inter_20951f", "__Inter_Fallback_20951f";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-.content{
+.content {
   display: flex;
   gap: 50px;
 }
 
+.circle {
+  opacity: 50%;
+}

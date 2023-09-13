@@ -12,10 +12,7 @@ const Footer = () => {
           <h1 className={styles.logoText}>Kanishka&rsquo;s Blog</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+          This is a place to come across and share original ideas.Lets create a place full of knowledge and information about everything humanity knows.
         </p>
         {/* <div className={styles.icons}>
           <Image src="/facebook.png" alt="" width={18} height={18} />
@@ -34,17 +31,11 @@ const Footer = () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
-        </div>
-        <div className={styles.list}>
-          <span className={styles.listTitle}>Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Tiktok</Link>
-          <Link href="/">Youtube</Link>
+          <Link href="/blog?cat=style">Style</Link>
+          <Link href="/blog?cat=fashion">Fashion</Link>
+          <Link href="/blog?cat=food">Food</Link>
+          <Link href="/blog?cat=coding">Coding</Link>
+          <Link href="/blog?cat=travel">Travel</Link>
         </div>
       </div>
     </div>

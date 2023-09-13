@@ -128,3 +128,10 @@
   align-items: center;
   background-color: var(--editor-bg);
 }
+
+.addimage {
+  font-size: 10px;
+  text-align: center;
+  margin-top: -10px;
+  color: green;
+}

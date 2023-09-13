@@ -131,6 +131,7 @@ const WritePage = () => {
                   <Image src="/image.png" alt="" width={20} height={20} />
                 </label>
               </button>
+              <p className={styles.addimage}>ADD IMAGE</p>
             </div>
           )}
 
