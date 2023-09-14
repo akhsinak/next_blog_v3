@@ -6,9 +6,11 @@ import { useRouter } from "next/router";
 
 import Link from "next/link";
 
+// console.log(`${process.env.NEXTAUTH_URL}`);
+// console.log("Welcome");
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `${process.env.NEXTAUTH_URL}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
@@ -42,14 +44,6 @@ const Featured = () => {
 
     fetchData();
   }, []);
-
-
-  const resetTypingAnimation = () => {
-    const typingTitle = document.getElementById('typing-title');
-    typingTitle.style.animation = 'none';
-    void typingTitle.offsetWidth; // Trigger a reflow to restart the animation
-    typingTitle.style.animation = null;
-  };
 
   const handleReadMoreClick = () => {
     // Toggle the state to show/hide full content
