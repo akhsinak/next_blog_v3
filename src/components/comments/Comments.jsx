@@ -21,11 +21,14 @@ const fetcher = async (url) => {
   return data;
 };
 
+const urll = "https://nextjs-blog-akhsinak.vercel.app"
+// const urll = "http://localhost:3000"
+
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `${process.env.NEXTAUTH_URL}/api/comments?postSlug=${postSlug}`,
+    `${urll}/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
