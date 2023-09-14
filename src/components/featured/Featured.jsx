@@ -2,15 +2,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 import Link from "next/link";
+import { nextauth_url } from "@/app/page";
 
-// console.log(`${process.env.NEXTAUTH_URL}`);
-// console.log("Welcome");
+// let urll;
+
+const urll = "https://nextjs-blog-akhsinak.vercel.app"
+// const urll = "http://localhost:3000"
 const getData = async (page, cat) => {
   const res = await fetch(
-    `${process.env.NEXTAUTH_URL}/api/posts?page=${page}&cat=${cat || ""}`,
+    `${urll}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }

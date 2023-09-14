@@ -7,8 +7,7 @@ import CardList from "@/components/cardList/CardList";
 import Menu from "@/components/Menu/Menu";
 import MainCategories from "@/components/mainCategories/MainCategories";
 
-
-// console.log(`${process.env.NEXTAUTH_URL}`);
+export const nextauth_url = process.env.NEXTAUTH_URL;
 
 export default function Home({ searchParams }) {
   const page = parseInt(searchParams.page) || 1;
