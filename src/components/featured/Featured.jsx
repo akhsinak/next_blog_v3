@@ -52,31 +52,56 @@ const Featured = () => {
         <b>Post</b> and <b>Discover</b> ideas
       </h1>
 
+      {/* <div className={`${styles.post} ${styles.skeleton}`}> */}
+      <div className={`${styles.post}`}>
 
-      {firstArticle && (
-        <div className={styles.post}>
-          <div className={styles.imgContainer}>
-            <Image src={firstArticle.img} alt={firstArticle.title} fill className={styles.image} />
-          </div>
-          <div className={styles.textContainer}>
-            <h1 className={styles.postTitle}>{firstArticle.title}</h1>
-            {/* Display either a truncated or full description based on the state */}
-            <div
-              className={styles.postDesc}
-              dangerouslySetInnerHTML={{
-                __html: showFullContent ? firstArticle.desc.substring(0, 700) : firstArticle.desc.substring(0, 400) + "..."
-              }}
-            />
-            <button className={styles.button} onClick={handleReadMoreClick}>
-              {showFullContent ? "Read Less" : "Read More"}
-            </button>
-            {/* <Link href={`/posts/${firstArticle.slug}`} className={styles.link}>
+        {firstArticle ? (
+          // <div >
+          <>
+            <div className={`${styles.imgContainer}`}>
+              <Image src={firstArticle.img} alt={firstArticle.title} fill className={`${styles.image} ${styles.skeleton}`} />
+            </div>
+            <div className={styles.textContainer}>
+              <h1 className={styles.postTitle}>{firstArticle.title}</h1>
+              {/* Display either a truncated or full description based on the state */}
+              <div
+                className={styles.postDesc}
+                dangerouslySetInnerHTML={{
+                  __html: showFullContent ? firstArticle.desc.substring(0, 700) : firstArticle.desc.substring(0, 400) + "..."
+                }}
+              />
+              <button className={styles.button} onClick={handleReadMoreClick}>
+                {showFullContent ? "Read Less" : "Read More"}
+              </button>
+              {/* <Link href={`/posts/${firstArticle.slug}`} className={styles.link}>
               Read More
             </Link> */}
-          </div>
-        </div>
-      )}
-    </div>
+            </div>
+          </>
+
+
+        ) : (
+          // <div >
+          <>
+            <div className={`${styles.imgContainer} ${styles.skeleton}`}></div>
+
+
+            <div className={`${styles.textContainer}`}>
+
+              <div className={`${styles.postTitle_skeleton} ${styles.skeleton}`}></div>
+              <div className={`${styles.postDec_skeleton} ${styles.skeleton}`} />
+              <div className={`${styles.postDec_skeleton} ${styles.skeleton}`} />
+              <div className={`${styles.postDec_skeleton} ${styles.skeleton}`} />
+              <div className={`${styles.button_skeleton} ${styles.skeleton}`} />
+
+
+            </div>
+          </>
+
+
+        )}
+      </div>
+    </div >
   );
 };
 
