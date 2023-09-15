@@ -31,11 +31,9 @@
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  /* border: 2px solid green; */
   height: 450px;
   display: flex;
   justify-content: center;
-  /* background-color: yellow; */
 }
 
 .postTitle {
@@ -45,7 +43,7 @@
 .postDesc {
   font-size: 20px;
   font-weight: 300;
-  color: blue;
+  color: var(--softTextColor);
 }
 
 .button {
