@@ -3,7 +3,7 @@ import styles from "./cardList.module.css";
 import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
-import LoadingCard from "../card/loadingCard";
+import LoadingCard from "../card/LoadingCard";
 
 
 // console.log("zindagi card")
@@ -45,11 +45,6 @@ const CardList = async ({ page, cat }) => {
               <LoadingCard />
             </>
           )
-
-          // <>
-          //   <LoadingCard />
-          //   <LoadingCard />
-          // </>
 
         }
       </div>
