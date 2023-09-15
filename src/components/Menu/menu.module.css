@@ -2,6 +2,9 @@
   flex: 2;
   margin-top: 60px;
   /* border: 2px solid red; */
+  /* border-left: 0.1px solid var(--softTextColor); */
+  padding-left: 10px;
+  height: 900px;
 }
 
 .subtitle {
@@ -12,7 +15,6 @@
 .title {
   font-size: 28px;
 }
-
 
 @media screen and (max-width: 1024px) {
   .container {
