@@ -30,6 +30,8 @@ a {
   --bgvar: rgb(199, 236, 239);
   --shadowcol: rgba(20, 20, 20, 0.5);
   --editor-bg: rgb(34, 33, 33);
+  --loading-col: rgba(83, 82, 82, 0.5);
+  --loading-back-col: rgba(43, 43, 43, 0.5);
 }
 
 .light {
@@ -39,8 +41,10 @@ a {
   --softTextColor: #626262;
   --log-color: red;
   --bgvar: rgb(199, 251, 255);
-  --shadowcol: rgba(200, 200, 200, 0.75);
+  --shadowcol: rgba(224, 224, 224, 0.75);
   --editor-bg: white;
+  --loading-col: rgba(255, 255, 255, 0.5);
+  --loading-back-col: rgba(224, 224, 224, 0.75);
 }
 
 .container {

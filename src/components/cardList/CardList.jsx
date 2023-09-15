@@ -3,6 +3,7 @@ import styles from "./cardList.module.css";
 import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
+import LoadingCard from "../card/loadingCard";
 
 
 // console.log("zindagi card")
@@ -35,15 +36,25 @@ const CardList = async ({ page, cat }) => {
     <div className={styles.container}>
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.posts}>
-        {posts?.map((item) => (
-          <Card item={item} key={item._id} />
-        ))}
-        {/* {posts?.[0]} */}
-        {/* {firstPost && <Card item={firstPost} key={firstPost._id} />} */}
-        {/* {secPost && <Card item={secPost} key={secPost._id} />} */}
+        {
+          posts ? (posts.map((item) => (
+            <Card item={item} key={item._id} loading={posts} />
+          ))) : (
+            <>
+              <LoadingCard />
+              <LoadingCard />
+            </>
+          )
+
+          // <>
+          //   <LoadingCard />
+          //   <LoadingCard />
+          // </>
+
+        }
       </div>
       <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
-    </div>
+    </div >
   );
 };
 

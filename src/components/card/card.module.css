@@ -1,22 +1,24 @@
 .container {
   margin-bottom: 50px;
   display: flex;
-  align-items: flex-start; /* Align items at the start of the flex container */
+  align-items: center; /* Align items at the start of the flex container */
   gap: 50px;
-  /* border: 10px solid red; */
+  /* border: 2px solid red; */
+  justify-content: center;
 }
 
 .imageContainer {
   height: 350px;
   position: relative;
-  /* border: 10px solid green; */
+  /* border: 2px solid green; */
   width: 100%;
+  border-radius: 20px;
 }
 
 .image {
   object-fit: cover;
   max-width: 100%; /* Ensure the image fits within the container */
-  height: auto; /* Maintain the image's aspect ratio */
+  height: auto;
   border-radius: 20px;
 }
 
@@ -25,6 +27,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  /* border: 2px solid blue; */
+  height: 350px;
+  align-items: flex-start;
 }
 
 .date {
@@ -40,6 +45,7 @@
   font-size: 18px;
   font-weight: 300;
   color: var(--softTextColor);
+  /* border: 2px solid blue; */
 }
 
 .link {
@@ -60,4 +66,54 @@
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center text */
   }
+}
+
+.skeleton {
+  background-color: var(--loading-back-col);
+  background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 40%,
+      var(--loading-col) 50%,
+      rgba(255, 255, 255, 0) 60%
+    )
+    var(--loading-back-col);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+.imageContainer_skeleton {
+  height: 350px;
+  width: 500px;
+  z-index: 999;
+}
+
+.detail_skeleton {
+  height: 20px;
+  width: 200px;
+  z-index: 999;
+}
+
+.title_skeleton {
+  height: 40px;
+  width: 250px;
+  z-index: 999;
+}
+
+.desc_skeleton {
+  height: 17px;
+  width: 350px;
+  z-index: 999;
+}
+
+.readmore_skeleton {
+  height: 40px;
+  width: 100px;
+  z-index: 999;
 }
