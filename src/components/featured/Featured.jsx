@@ -3,13 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
 
-import Link from "next/link";
-import { nextauth_url } from "@/app/page";
-
-// let urll;
-
-const urll = "https://nextjs-blog-akhsinak.vercel.app"
-// const urll = "http://localhost:3000"
+const urll = process.env.NEXT_PUBLIC_URL;
 const getData = async (page, cat) => {
   const res = await fetch(
     `${urll}/api/posts?page=${page}&cat=${cat || ""}`,
