@@ -26,7 +26,7 @@ const Featured = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await getData(1, "style");
+        const data = await getData(1, "travel");
         if (data.posts && data.posts.length > 0) {
           const n = data.posts.length
           const randomIndex = Math.floor(Math.random() * n); // Generate a random index
