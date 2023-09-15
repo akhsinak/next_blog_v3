@@ -6,7 +6,7 @@ import Comments from "@/components/comments/Comments";
 
 
 const getData = async (slug) => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${slug}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/posts/${slug}`, {
     cache: "no-store",
   });
 
@@ -35,7 +35,7 @@ const SinglePage = async ({ params }) => {
             )}
             <div className={styles.userTextContainer}>
               <span className={styles.username}>{data?.user.name}</span>
-              <span className={styles.date}>01.01.2024</span>
+              <span className={styles.date}>01.01.2022</span>
             </div>
           </div>
         </div>
