@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  /* border: 2px solid red; */
   height: 550px;
 }
 
@@ -20,7 +19,6 @@
   flex: 1;
   height: 500px;
   position: relative;
-  background-color: red;
   border-radius: 40px;
 }
 
