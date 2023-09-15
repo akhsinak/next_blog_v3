@@ -21,8 +21,9 @@ const fetcher = async (url) => {
   return data;
 };
 
-const urll = "https://nextjs-blog-akhsinak.vercel.app"
-// const urll = "http://localhost:3000"
+const urll = process.env.NEXT_PUBLIC_URL;
+
+// console.log("hello world");
 
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
@@ -36,6 +37,11 @@ const Comments = ({ postSlug }) => {
   const [isSubmitting, setIsSubmitting] = useState(false); // State to control the spinner visibility
 
   const handleSubmit = async () => {
+    if (!desc.trim()) {
+      // Check if the comment content is empty or contains only whitespace
+      return;
+    }
+
     setIsSubmitting(true); // Show the spinner
 
     await fetch("/api/comments", {
@@ -46,6 +52,7 @@ const Comments = ({ postSlug }) => {
     setIsSubmitting(false); // Hide the spinner
     mutate();
   };
+
 
   return (
     <div className={styles.container}>
